@@ -1,9 +1,17 @@
 {
     "name": "vinelab/lucid",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": ["framework", "laravel", "lucid", "domains", "architecture"],
     "license": "MIT",
     "type": "project",
+    "authors": [
+        {
+            "name": "Abed Halawi",
+            "email": "abed.halawi@vinelab.com",
+            "homepage": "http://about.me/abedhalawi",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",

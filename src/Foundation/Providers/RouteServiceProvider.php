@@ -11,7 +11,8 @@
 
 namespace App\Foundation\Providers;
 
-use App\Foundation\RouteServiceProvider as ServiceProvider;
+use Illuminate\Routing\Router;
+use Caffeinated\Modules\Providers\RouteServiceProvider as ServiceProvider;
 
 /**
  * @author Abed Halawi <abed.halawi@vinelab.com>

@@ -34,10 +34,11 @@ abstract class Feature implements SelfHandling
      *
      * @param string                         $job
      * @param array|\Illuminate\Http\Request $arguments
+     * @param array                          $extra
      *
      * @return mixed
      */
-    public function run($job, $arguments, $extra = [])
+    public function run($job, $arguments = [], $extra = [])
     {
         if ($arguments instanceof Request) {
             $result = $this->dispatchFrom($job, $arguments, $extra);

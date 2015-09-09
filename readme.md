@@ -31,7 +31,7 @@ should be in `src/Services/[ServiceName]/Providers/RouteServiceProvider`
     ```
     with
     ```php
-    use App\Foundation\RouteServiceProvider as ServiceProvider;
+    use App\Foundation\Providers\RouteServiceProvider as ServiceProvider;
     ```
     - Remove useless `use` statement
     ```php

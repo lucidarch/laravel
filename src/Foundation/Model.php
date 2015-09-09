@@ -11,13 +11,13 @@
 
 namespace App\Foundation;
 
-use NeoEloquent;
+use Eloquent;
 
 /**
  * Base Model.
  *
  * @author Abed Halawi <abed.halawi@vinelab.com>
  */
-class Model extends NeoEloquent
+class Model extends Eloquent
 {
 }

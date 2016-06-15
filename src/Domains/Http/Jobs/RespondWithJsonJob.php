@@ -7,8 +7,8 @@ use Illuminate\Routing\ResponseFactory;
 
 class RespondWithJsonJob extends Job
 {
-    private $content;
     private $status;
+    private $content;
     private $headers;
     private $options;
 
@@ -22,6 +22,11 @@ class RespondWithJsonJob extends Job
 
     public function handle(ResponseFactory $response)
     {
-        return $response->json($this->content, $this->status, $this->headers, $this->options);
+        $response = [
+            'data' => $this->content,
+            'status' => $this->status,
+        ];
+
+        return $response->json($response, $this->status, $this->headers, $this->options);
     }
 }

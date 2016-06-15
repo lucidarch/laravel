@@ -1,23 +1,12 @@
 <?php
 
-/*
- * This file is part of the lucid package.
- *
- * © Vinelab <dev@vinelab.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 namespace App\Foundation;
 
 /**
- * Base Validator class, to be extended by specific validators,
- * decorating the process of validating input. Simply declare
+ * Base Validator class, to be extended by specific validators.
+ * Decorates the process of validating input. Simply declare
  * the $rules and call validate($attributes) and you have an
  * \Illuminate\Validation\Validator instance.
- *
- * @author Abed Halawi <abed.halawi@vinelab.com>
  */
 class Validator
 {

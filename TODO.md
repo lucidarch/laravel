@@ -1,0 +1,12 @@
+- [x] Initial Structure
+- [ ] Include Lucid Console
+- [ ] Support for multiple versions of Laravel (using branches)
+- [ ] Documentation in Wiki
+    - [ ] Installation & versions
+    - [ ] Definitions & Terminology
+        - [ ] Foundation
+        - [ ] Data
+        - [ ] Domains
+        - [ ] Services
+    - [ ] How to use Domains (per domain for included domains)
+    - [ ] How to extend `Foundation` elements

@@ -145,7 +145,7 @@ return [
         Framework\Providers\EventServiceProvider::class,
         Framework\Providers\RouteServiceProvider::class,
 
-        Caffeinated\Modules\ModulesServiceProvider::class,
+        App\Foundation\Providers\ServiceProvider::class,
     ],
 
     /*

@@ -3,31 +3,22 @@
 namespace App\Foundation\Providers;
 
 use Illuminate\Routing\Router;
-use Caffeinated\Modules\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as BaseServiceProvider;
 
-class RouteServiceProvider extends ServiceProvider
+abstract class RouteServiceProvider extends BaseServiceProvider
 {
-    /**
-     * This is the service directory name.
-     *
-     * @var string
-     */
-    protected $serviceName = '';
-
     /**
      * Define the routes for the module.
      *
      * @param \Illuminate\Routing\Router $router
      */
-    public function map(Router $router)
+    abstract public function map(Router $router);
+
+    public function loadRoutesFile($router, $namespace, $path)
     {
-        $namespace = config('modules.namespace').$this->serviceName.'\Http\Controllers';
-
-        $router->group(['namespace' => $namespace], function ($router) {
-            $routesFile = config('modules.path').'/'.$this->serviceName.'/Http/routes.php';
-
-            if (file_exists($routesFile)) {
-                require $routesFile;
+        $router->group(['namespace' => $namespace], function ($router) use($path) {
+            if (file_exists($path)) {
+                require $path;
             }
         });
     }

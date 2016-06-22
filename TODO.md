@@ -1,6 +1,7 @@
 - [x] Initial Structure
 - [ ] Include Lucid Console
 - [ ] Support for multiple versions of Laravel (using branches)
+- [ ] Transforming an existing project to use Lucid
 - [ ] Documentation in Wiki
     - [ ] Installation & versions
     - [ ] Definitions & Terminology

@@ -20,13 +20,13 @@ class RespondWithJsonJob extends Job
         $this->options = $options;
     }
 
-    public function handle(ResponseFactory $response)
+    public function handle(ResponseFactory $factory)
     {
         $response = [
             'data' => $this->content,
             'status' => $this->status,
         ];
 
-        return $response->json($response, $this->status, $this->headers, $this->options);
+        return $factory->json($response, $this->status, $this->headers, $this->options);
     }
 }

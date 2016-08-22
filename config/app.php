@@ -146,6 +146,7 @@ return [
         Framework\Providers\RouteServiceProvider::class,
 
         App\Foundation\Providers\ServiceProvider::class,
+        Lucid\Console\LucidServiceProvider::class,
     ],
 
     /*

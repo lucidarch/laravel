@@ -6,11 +6,17 @@ Read about the [Lucid Architecture Concept](https://medium.com/vine-lab/the-luci
 To start your project with Lucid right away, run the following command:
 
 ```
-composer create-project vinelab/lucid my-project
+composer create-project lucid-arch/laravel my-project
+```
+
+This will give you a Laravel 5.1 installation with Lucid out-of-the-box. If you wish to download other versions of Laravel you may specify it as well:
+
+```
+composer create-project lucid-arch/laravel=5.2 my-project-5.2
 ```
 
 ## Getting Started
-This project ships with the [Lucid Console](https://github.com/Vinelab/lucid-console) which provides an interactive
+This project ships with the [Lucid Console](https://github.com/lucid-architecture/laravel-console) which provides an interactive
 user interface and a command line interface that are useful for scaffolding and exploring Services, Features and Jobs.
 
 ### Setup

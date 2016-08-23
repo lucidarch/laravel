@@ -1,20 +1,20 @@
 {
-    "name": "lucid-arch/laravel",
-    "description": "A project scaffold implementing the Lucid architecture in Laravel 5",
-    "keywords": ["framework", "laravel", "lucid", "domains", "architecture"],
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
-    "authors": [],
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*"
+        "laravel/framework": "5.2.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
-        "phpspec/phpspec": "~2.1",
-        "lucid-arch/laravel-console": "dev-master"
+        "symfony/css-selector": "2.8.*|3.0.*",
+        "symfony/dom-crawler": "2.8.*|3.0.*",
+        "lucid-arch/laravel-console": "^0.2.2"
     },
     "autoload": {
         "classmap": [

@@ -1,5 +1,5 @@
 {
-    "name": "vinelab/lucid",
+    "name": "lucid/laravel",
     "description": "A project scaffold implementing the Lucid architecture in Laravel 5",
     "keywords": ["framework", "laravel", "lucid", "domains", "architecture"],
     "license": "MIT",

@@ -30,6 +30,16 @@ export PATH="./vendor/bin:$PATH"
 
 > See [CLI Reference](#cli-reference) for all the commands that are available.
 
+#### Launching the Interactive Console (UI)
+
+1. Serve Application
+One way is to use the built-in server by running:
+```bash
+php artisan serve
+```
+> Any other method would also work (Apache, Nginx, etc...)
+2. Visit your application at */lucid/console*
+
 ### 1. Create a Service
 
 ##### CLI
@@ -39,8 +49,23 @@ lucid make:service Api
 
 ##### UI
 
+
+
 Using one of the methods above, a new service folder must've been created under `src/Services` with the name `Api`.
-One more step is required so that Laravel recognises the service we just created.
+
+The **Api** directory will initially contain the following directories:
+
+```
+src/Services/Api
+├── Console         # Eveything that has to do with the Console (i.e. Commands)
+├── Features        # Contains the Api's Features classes
+├── Http            # Routes, controllers and middlewares
+├── Providers       # Service providers and binding
+├── database        # Database migrations and seeders
+└── resources       # Assets, Lang and Views
+```
+
+One more step is required for Laravel to recognise the service we just created.
 
 #### Register Service
 

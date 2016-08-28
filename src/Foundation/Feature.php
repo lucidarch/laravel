@@ -4,12 +4,14 @@ namespace App\Foundation;
 
 use ReflectionClass;
 use Illuminate\Http\Request;
-use App\Domains\Qmesueue\DefaultQueue;
+use Illuminate\Support\Collection;
+use App\Domains\Queue\DefaultQueue;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 abstract class Feature implements SelfHandling
 {
+    use MarshalTrait;
     use DispatchesJobs;
 
     /**
@@ -27,9 +29,13 @@ abstract class Feature implements SelfHandling
     public function run($job, $arguments = [], $extra = [])
     {
         if ($arguments instanceof Request) {
-            $result = $this->dispatchFrom($job, $arguments, $extra);
+            $result = $this->dispatch($this->marshal($job, $arguments, $extra));
         } else {
-            $result = $this->dispatchFromArray($job, $arguments);
+            if (!is_object($job)) {
+                $job = $this->marshal($job, new Collection(), $arguments);
+            }
+
+            $result = $this->dispatch($job, $arguments);
         }
 
         return $result;

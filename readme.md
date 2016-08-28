@@ -80,7 +80,7 @@ One more step is required for Laravel to recognise the service we just created.
 
 - Open `src/Foundation/Providers/ServieProvider`
 - Add `use App\Services\Api\Providers\ApiServiceProvider`
-- In the `handle` method add `$this->app->register(ApiServiceProvider::class)`
+- In the `register` method add `$this->app->register(ApiServiceProvider::class)`
 
 ### 2. Create a Feature
 

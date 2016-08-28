@@ -3,6 +3,7 @@
 Read about the [Lucid Architecture Concept](https://medium.com/vine-lab/the-lucid-architecture-concept-ad8e9ed0258f).
 
 ## Installation
+### 5.3
 To start your project with Lucid right away, run the following command:
 
 ```
@@ -11,6 +12,12 @@ composer create-project lucid-arch/laravel my-project
 
 This will give you a Laravel 5.3 installation with Lucid out-of-the-box. If you wish to download other versions of Laravel you may specify it as well:
 
+##### 5.2
+```
+composer create-project lucid-arch/laravel=5.2 my-project-5.2
+```
+
+##### 5.1
 ```
 composer create-project lucid-arch/laravel=5.1 my-project-5.1
 ```
@@ -38,7 +45,7 @@ One way is to use the built-in server by running:
 php artisan serve
 ```
 > Any other method would also work (Apache, Nginx, etc...)
-2. Visit your application at */lucid/console*
+2. Visit your application at */lucid/dashboard*
 
 ### 1. Create a Service
 

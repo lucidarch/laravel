@@ -37,7 +37,7 @@ call `lucid`:
 export PATH="./vendor/bin:$PATH"
 ```
 
-> See [CLI Reference](#cli-reference) for all the commands that are available.
+For a list of all the commands that are available run `lucid` or see the [CLI Reference](#cli-reference).
 
 #### Launching the Interactive Console (UI)
 
@@ -170,7 +170,8 @@ Route::get('/users', 'UserController@get');
 Following are the commands available through the `Lucid` CLI.
 
 - `make:service [name]`: Generate a new Service with the given name
-- `make:feature [service] [feature title]`: Generate a new Feature in the given Service with the given title
+- `make:feature [service] [feature title]`: Generate a new Feature in the given Service
 - `make:job [domain] [job title]`: Generate a new Job in the specified Domain (non-existing domains will be created)
+- `make:controller [service] [controller name]`: Generate a new Controller in the given Service
 - `list:services`: List the existing Services
-- `list:features`: List the existing Features, organised per Service
+- `list:features`: List the existing Features, organised by Service

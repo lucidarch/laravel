@@ -125,7 +125,7 @@ namespace `App\Domains\User\Jobs\GetUsersJob`).
 ##### Run The Job
 In **ListUsersFeature::handle(Request $request)**
 
-```
+```php
 public function handle(Request $request)
 {
     $users = $this->run(GetUsersJob::class);
@@ -140,14 +140,15 @@ used to respond to a request in JSON format.
 ##### Expose The Feature
 To be able to serve that Feature we need to create a route and a controller that does so.
 
-Create a controller in `src/Services/Api/Http/Controllers/UserController.php`
+Generate a plain controller with the following command
+
+```
+lucid make:controller user --plain
+```
+
+Add the `get` method to it:
 
 ```php
-namespace App\Services\Api\Http\Controllers;
-
-use App\Foundation\Http\Controller;
-use App\Services\Api\Features\ListUsersFeature;
-
 class UserController extends Controller
 {
     public function get()
@@ -165,6 +166,8 @@ Add the `/users` route within that group.
 ```php
 Route::get('/users', 'UserController@get');
 ```
+
+Now if you visit `/api/users` you should see the JSON structure.
 
 ## CLI Reference
 Following are the commands available through the `Lucid` CLI.

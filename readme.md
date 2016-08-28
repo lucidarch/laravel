@@ -14,12 +14,12 @@ This will give you a Laravel 5.3 installation with Lucid out-of-the-box. If you 
 
 ##### 5.2
 ```
-composer create-project lucid-arch/laravel=5.2 my-project-5.2
+composer create-project lucid-arch/laravel=^5.2 my-project-5.2
 ```
 
 ##### 5.1
 ```
-composer create-project lucid-arch/laravel=5.1 my-project-5.1
+composer create-project lucid-arch/laravel=^5.1 my-project-5.1
 ```
 
 ## Getting Started

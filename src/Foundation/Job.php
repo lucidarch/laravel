@@ -2,7 +2,6 @@
 
 namespace App\Foundation;
 
-use Framework\Jobs\Job as FrameworkJob;
 use Illuminate\Contracts\Bus\SelfHandling;
 
 /**
@@ -12,6 +11,6 @@ use Illuminate\Contracts\Bus\SelfHandling;
  * will have the "handle()" method
  * called instead.
  */
-abstract class Job extends FrameworkJob implements SelfHandling
+abstract class Job
 {
 }

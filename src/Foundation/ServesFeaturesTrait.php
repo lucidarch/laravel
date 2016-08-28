@@ -20,6 +20,6 @@ trait ServesFeaturesTrait
      */
     public function serve($feature, $arguments = [])
     {
-        return $this->dispatchFromArray($this->marshal($feature, new Collection(), $arguments));
+        return $this->dispatch($this->marshal($feature, new Collection(), $arguments));
     }
 }

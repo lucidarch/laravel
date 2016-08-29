@@ -47,7 +47,8 @@ One way is to use the built-in server by running:
 php artisan serve
 ```
 > Any other method would also work (Apache, Nginx, etc...)
-2. Visit your application at */lucid/dashboard*
+2. Run `php artisan vendor:publish --provider="Lucid\Console\LucidServiceProvider"`
+3. Visit your application at */lucid/dashboard*
 
 ### 1. Create a Service
 

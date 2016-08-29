@@ -143,7 +143,7 @@ To be able to serve that Feature we need to create a route and a controller that
 Generate a plain controller with the following command
 
 ```
-lucid make:controller user --plain
+lucid make:controller api user --plain
 ```
 
 Add the `get` method to it:

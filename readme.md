@@ -79,7 +79,7 @@ One more step is required for Laravel to recognise the service we just created.
 
 #### Register Service
 
-- Open `src/Foundation/Providers/ServieProvider`
+- Open `src/Foundation/Providers/ServiceProvider`
 - Add `use App\Services\Api\Providers\ApiServiceProvider`
 - In the `register` method add `$this->app->register(ApiServiceProvider::class)`
 

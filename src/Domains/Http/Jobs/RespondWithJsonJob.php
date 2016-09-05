@@ -2,7 +2,7 @@
 
 namespace App\Domains\Http\Jobs;
 
-use App\Foundation\Job;
+use Lucid\Foundation\Job;
 use Illuminate\Routing\ResponseFactory;
 
 class RespondWithJsonJob extends Job

@@ -156,7 +156,7 @@ return [
         Framework\Providers\EventServiceProvider::class,
         Framework\Providers\RouteServiceProvider::class,
 
-        App\Foundation\Providers\ServiceProvider::class,
+        App\Foundation\ServiceProvider::class,
         Lucid\Console\LucidServiceProvider::class,
     ],
 

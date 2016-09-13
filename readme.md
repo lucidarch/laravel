@@ -37,7 +37,7 @@ call `lucid`:
 export PATH="./vendor/bin:$PATH"
 ```
 
-For a list of all the commands that are available run `lucid` or see the [CLI Reference](#cli-reference).
+For a list of all the commands that are available run `lucid` or see the [CLI Reference](https://github.com/lucid-architecture/laravel-console).
 
 #### Launching the Interactive Console (UI)
 
@@ -87,7 +87,7 @@ One more step is required for Laravel to recognise the service we just created.
 
 ##### CLI
 ```
-lucid make:feature api ListUsers
+lucid make:feature ListUsers api
 ```
 
 ##### UI
@@ -100,7 +100,7 @@ This project ships with a couple of jobs that can be found in their correspondin
 
 ##### CLI
 ```
-lucid make:job user GetUsers
+lucid make:job GetUsers user
 ```
 
 ##### UI
@@ -136,15 +136,15 @@ public function handle(Request $request)
 ```
 
 The `RespondWithJsonJob` is one of the Jobs that were shipped with this project, it lives in the `Http` domain and is
-used to respond to a request in JSON format.
+used to respond to a request in structured JSON format.
 
-##### Expose The Feature
+##### Serve The Feature
 To be able to serve that Feature we need to create a route and a controller that does so.
 
 Generate a plain controller with the following command
 
 ```
-lucid make:controller api user --plain
+lucid make:controller user api --plain
 ```
 
 Add the `get` method to it:
@@ -169,13 +169,3 @@ Route::get('/users', 'UserController@get');
 ```
 
 Now if you visit `/api/users` you should see the JSON structure.
-
-## CLI Reference
-Following are the commands available through the `Lucid` CLI.
-
-- `make:service [name]`: Generate a new Service with the given name
-- `make:feature [service] [feature title]`: Generate a new Feature in the given Service
-- `make:job [domain] [job title]`: Generate a new Job in the specified Domain (non-existing domains will be created)
-- `make:controller [service] [controller name]`: Generate a new Controller in the given Service
-- `list:services`: List the existing Services
-- `list:features`: List the existing Features, organised by Service

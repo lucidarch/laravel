@@ -266,23 +266,23 @@ it is simply a personal preference for readability and writing less code, when a
 it's instantiated.
 - The order of parameters that we use when calling a job with its class name is irrelevant to their order in the
 Job's constructor signature. i.e.
-    ```php
-    $this->run(LogUserSearchJob::class, [
-        'date' => new DateTime(),
-        'query' => $request->input(),
-        'resultIds' => $results->lists('id'), // only the ids of the results are required
-    ]);
-    ```
-    ```php
-    class LogUserSearchJob
+```php
+$this->run(LogUserSearchJob::class, [
+    'date' => new DateTime(),
+    'query' => $request->input(),
+    'resultIds' => $results->lists('id'), // only the ids of the results are required
+]);
+```
+```php
+class LogUserSearchJob
+{
+    public function __construct($query, array $resultIds, DateTime $date)
     {
-        public function __construct($query, array $resultIds, DateTime $date)
-        {
-            // ...
-        }
+        // ...
     }
-    ```
-    This will work perfectly fine, as long as the key name (`'resultIds' => ...`) is the same as the variable's name in the constructor (`$resultIds`)
+}
+```
+This will work perfectly fine, as long as the key name (`'resultIds' => ...`) is the same as the variable's name in the constructor (`$resultIds`)
 - Of course, we need to create and import (`use`) our Job classes with the correct namespaces, but we won't do that here
 since this is only to showcase and not intended to be running, for a working example see [Getting Started](#getting-started).
 

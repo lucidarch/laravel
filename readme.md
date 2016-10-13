@@ -40,6 +40,10 @@ The Lucid Architecture is a software architecture that helps contain application
 to not become overwhelmingly unmaintainable, gets us rid of code rot that will later become legacy code, and translate
 the day-to-day language such as  Feature and Service into actual, physical code.
 
+##### The Lucid Architecture for Building Scalable Applications - Laracon EU 2016
+Check out my talk at LaraconEU 2016 where I introduce the concept and application of the Lucid architecture:
+[![Abed Halawi - The Lucid Architecture for Building Scalable Applications](http://img.youtube.com/vi/wSnM4JkyxPw/0.jpg)](http://www.youtube.com/watch?v=wSnM4JkyxPw "Abed Halawi - The Lucid Architecture for Building Scalable Applications")
+
 ### Components
 
 #### Directory Structure

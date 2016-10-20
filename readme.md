@@ -2,6 +2,10 @@
 
 Read about the [Lucid Architecture Concept](https://medium.com/vine-lab/the-lucid-architecture-concept-ad8e9ed0258f).
 
+### Join The Community on Slack
+[![Slack Status](https://lucid-slack.herokuapp.com/badge.svg)](https://lucid-slack.herokuapp.com)
+
+## Index
 - [Installation](#installation)
 - [Introduction](#introduction)
     - [Components](#components)

@@ -209,7 +209,5 @@ class Repository
 
             return call_user_func_array(array($this, 'findBy'), $arguments);
         }
-
-        parent::__call($method, $arguments);
     }
 }

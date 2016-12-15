@@ -236,7 +236,7 @@ public function handle(Request $request)
     // throw an exception of InvalidArgumentException
     $this->run(new ValidateUserSearchQueryJob($request->input()));
 
-    $results = $this->run(SearchUsersFeature::class, [
+    $results = $this->run(SearchUsersJob::class, [
         'query' => $request->input('query'),
     ]);
 

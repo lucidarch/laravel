@@ -361,7 +361,7 @@ The **Api** directory will initially contain the following directories:
 
 ```
 src/Services/Api
-├── Console         # Eveything that has to do with the Console (i.e. Commands)
+├── Console         # Everything that has to do with the Console (i.e. Commands)
 ├── Features        # Contains the Api's Features classes
 ├── Http            # Routes, controllers and middlewares
 ├── Providers       # Service providers and binding

@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'My Application',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,6 +176,9 @@ return [
         // Framework\Providers\BroadcastServiceProvider::class,
         Framework\Providers\EventServiceProvider::class,
         Framework\Providers\RouteServiceProvider::class,
+
+        App\Foundation\ServiceProvider::class,
+        Lucid\Console\LucidServiceProvider::class,
 
     ],
 

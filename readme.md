@@ -306,7 +306,7 @@ components, currenly holds the `ServiceProvider` which is the link between the s
 You might never need or use this directory for anything else, but in case you encountered a case where a class
 needs to be shared across all components and does belong in any, feel free to use this one.
 
-Evey service must be registered inside the foundation's service provider after being created for laravel to know about it,
+Every service must be registered inside the foundation's service provider after being created for laravel to know about it,
 simply add `$this->app->register([service name]ServiceProvider::class);` to the `register` methods of the
 foundation's `ServiceProvider`. For example, with an Api Service:
 
@@ -363,7 +363,7 @@ The **Api** directory will initially contain the following directories:
 
 ```
 src/Services/Api
-├── Console         # Eveything that has to do with the Console (i.e. Commands)
+├── Console         # Everything that has to do with the Console (i.e. Commands)
 ├── Features        # Contains the Api's Features classes
 ├── Http            # Routes, controllers and middlewares
 ├── Providers       # Service providers and binding

@@ -2,8 +2,9 @@
 
 namespace Framework\Http\Controllers\Auth;
 
-use Framework\User;
 use Validator;
+use Framework\User;
+use Illuminate\Support\Facades\Hash;
 use Framework\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -65,7 +66,7 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => Hash::make($data['password']),
         ]);
     }
 }

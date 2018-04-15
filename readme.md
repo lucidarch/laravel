@@ -185,6 +185,18 @@ class UserController extends Controller
     }
 }
 ```
+#### view
+To access service's view file. just prepend service name followed by two colon ::
+
+example
+```
+@extends('serivename::index')
+```
+
+with jobs you can specify path like this
+```
+new RespondWithViewJob('servicename::student.login')
+```
 
 #### Job
 A Job is responsible for one element of execution in the application, and play the role of a step in the accomplishment

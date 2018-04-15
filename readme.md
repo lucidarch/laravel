@@ -185,17 +185,36 @@ class UserController extends Controller
     }
 }
 ```
-#### view
-To access service's view file. just prepend service name followed by two colon ::
+#### Views
+To access a service's view file, prepend the file's name with the service name followed by two colons `::`
 
-example
+Example extending view file in blade:
 ```
-@extends('serivename::index')
+@extends('servicename::index')
 ```
 
-with jobs you can specify path like this
+Usage with jobs is similar:
+```php
+new RespondWithViewJob('servicename::user.login')
 ```
-new RespondWithViewJob('servicename::student.login')
+
+`RespondWithJsonJob` accepts the following parameters:
+```php
+RespondWithViewJob($template, $data = [], $status = 200, array $headers = []);
+```
+
+Usage of template with data:
+```php
+$this->run(new RespondWithViewJob('servicename::user.list', ['users' => $users]));
+```
+Or
+```php
+$this->run(RespondWithViewJob::class, [
+    'template' => 'servicename::user.list',
+    'data' => [
+        'users' => $users
+    ],
+]);
 ```
 
 #### Job

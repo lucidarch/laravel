@@ -153,7 +153,7 @@ the thinnest controllers ever! Here's an example of generating a feature and ser
 > You might want to [Setup](#setup) to be able to use the `lucid` command.
 
 > IMPORTANT! You need at least one service to be able to host your features. In this example we are using the Api
-service generated previously, refered to as `api` in the commands.
+service generated previously, referred to as `api` in the commands.
 
 ```
 lucid make:feature SearchUsers api
@@ -161,7 +161,7 @@ lucid make:feature SearchUsers api
 
 And we will have `src/Services/Api/Features/SearchUsersFeature.php` and its test `src/Services/Api/Tests/Features/SearchUsersFeatureTest.php`.
 
-Inside the Feature class there's a `handle` method which is the method that will be called when we dispatch that feature,
+Inside the Feature class, there's a `handle` method which is the method that will be called when we dispatch that feature,
 and it supports dependency injection, which is the perfect place to define your dependencies.
 
 Now we need a controller to serve that feature:
@@ -348,11 +348,11 @@ Value Objects and anything that has to do with data (algorithms etc.).
 
 ## Foundation
 This is a place for foundational elements that act as the most abstract classes that do not belong in any of the
-components, currenly holds the `ServiceProvider` which is the link between the services and the framework (Laravel).
+components, currently holds the `ServiceProvider` which is the link between the services and the framework (Laravel).
 You might never need or use this directory for anything else, but in case you encountered a case where a class
 needs to be shared across all components and does belong in any, feel free to use this one.
 
-Every service must be registered inside the foundation's service provider after being created for laravel to know about it,
+Every service must be registered inside the foundation's service provider after being created for Laravel to know about it,
 simply add `$this->app->register([service name]ServiceProvider::class);` to the `register` methods of the
 foundation's `ServiceProvider`. For example, with an Api Service:
 
@@ -368,7 +368,7 @@ public function register()
 
 ## Getting Started
 This project ships with the [Lucid Console](https://github.com/lucid-architecture/laravel-console) which provides an interactive
-user interface and a command line interface that are useful for scaffolding and exploring Services, Features and Jobs.
+user interface and a command line interface that are useful for scaffolding and exploring Services, Features, and Jobs.
 
 ### Setup
 The `lucid` executable will be in `vendor/bin`. If you don't have `./vendor/bin/` as part of your `PATH` you will
@@ -417,7 +417,7 @@ src/Services/Api
 └── resources       # Assets, Lang and Views
 ```
 
-One more step is required for Laravel to recognise the service we just created.
+One more step is required for Laravel to recognize the service we just created.
 
 #### Register Service
 
@@ -434,7 +434,7 @@ lucid make:feature ListUsers api
 
 ##### UI
 
-Using on of the methods above, the new Feature can be found at `src/Services/Api/Features/ListUsersFeature.php`.
+Using one of the methods above, the new Feature can be found at `src/Services/Api/Features/ListUsersFeature.php`.
 Now you can fill up a bunch of jobs in its `handle` method.
 
 ### 3. Create a Job
@@ -447,7 +447,7 @@ lucid make:job GetUsers user
 
 ##### UI
 
-Using on of the methods above, the new Job can be found at `src/Domains/User/Jobs/GetUsers` and now you can fill
+Using one of the methods above, the new Job can be found at `src/Domains/User/Jobs/GetUsers` and now you can fill
 it with functionality in the `handle` method. For this example we will just add a static `return` statement:
 
 ```php
@@ -478,7 +478,7 @@ public function handle(Request $request)
 ```
 
 The `RespondWithJsonJob` is one of the Jobs that were shipped with this project, it lives in the `Http` domain and is
-used to respond to a request in structured JSON format.
+used to respond to a request in a structured JSON format.
 
 ##### Serve The Feature
 To be able to serve that Feature we need to create a route and a controller that does so.
@@ -513,15 +513,15 @@ Route::get('/users', 'UserController@get');
 Now if you visit `/api/users` you should see the JSON structure.
 
 ## Microservices
-If you have been hearing about microservices lately, and wondering how that works and would like plan your next project
+If you have been hearing about microservices lately, and wondering how that works and would like to plan your next project
 based on microservices, or build your application armed and ready for the shift when it occurs, Lucid is your best bet.
 It has been designed with scale at the core and the microservice transition in mind, it is no coincidence that the
 different parts of the application that will (most probably) later on become the different services with the microservice
-architecture, are called **Service**. However, [it is recommended](http://martinfowler.com/bliki/MonolithFirst.html)
+architecture are called **Service**. However, [it is recommended](http://martinfowler.com/bliki/MonolithFirst.html)
 that only when your monolith application grow so large that it becomes crucial to use microservices for the sake of
 the progression and maintenance of the project, to do the shift; because once you've built your application using Lucid,
 the transition to a microservice architecture will be logically simpler to plan and physically straight-forward
 to implement. There is a [microservice counterpart](https://github.com/lucid-architecture/laravel-microservice)
 to Lucid that you can check out [here](https://github.com/lucid-architecture/laravel-microservice).
 
-With more on the means of transitioning from a monolith to a microservice
+With more on the means of transitioning from a monolith to a microservice.

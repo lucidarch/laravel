@@ -528,3 +528,29 @@ to implement. There is a [microservice counterpart](https://github.com/lucid-arc
 to Lucid that you can check out [here](https://github.com/lucid-architecture/laravel-microservice).
 
 With more on the means of transitioning from a monolith to a microservice.
+
+### Event Hooks
+
+Lucid exposes event hooks that allow you to listen on each dispatched feature, operation or job. This is especially useful for tracing:
+
+```php
+use Illuminate\Support\Facades\Event;
+use Lucid\Foundation\Events\FeatureStarted;
+use Lucid\Foundation\Events\OperationStarted;
+use Lucid\Foundation\Events\JobStarted;
+
+Event::listen(FeatureStarted::class, function (FeatureStarted $event) {
+    // $event->name
+    // $event->arguments
+});
+
+Event::listen(OperationStarted::class, function (OperationStarted $event) {
+    // $event->name
+    // $event->arguments
+});
+
+Event::listen(JobStarted::class, function (JobStarted $event) {
+    // $event->name
+    // $event->arguments
+});
+```

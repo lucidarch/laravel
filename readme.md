@@ -29,14 +29,21 @@ If you prefer a video, watch the announcement of The Lucid Architecture at Larac
 
 ## Installation
 
-### 5.8
+### 6
 To start your project with Lucid right away, run the following command:
 
 ```
 composer create-project lucid-arch/laravel my-project
 ```
 
-This will give you a Laravel 5.8 installation with Lucid out-of-the-box. If you wish to download other versions of Laravel you may specify it as well:
+This will give you a Laravel 6 installation with Lucid out-of-the-box. If you wish to download other versions of Laravel you may specify it as well:
+
+##### 5.8
+```
+composer create-project lucid-arch/laravel=5.8.x my-project-5.8
+```
+
+> Literally 5.8.x and not 5.8.0 or 5.8.1...
 
 ##### 5.7
 ```
@@ -50,8 +57,6 @@ composer create-project lucid-arch/laravel=5.7.x my-project-5.7
 composer create-project lucid-arch/laravel=5.6.x my-project-5.6
 ```
 
-> Literally 5.6.x and not 5.6.0 or 5.6.1...
-
 ##### 5.5
 ```
 composer create-project lucid-arch/laravel=5.5.x my-project-5.5
@@ -60,11 +65,6 @@ composer create-project lucid-arch/laravel=5.5.x my-project-5.5
 ##### 5.4
 ```
 composer create-project lucid-arch/laravel=5.4.x my-project-5.4
-```
-
-##### 5.3
-```
-composer create-project lucid-arch/laravel=5.3.x my-project-5.3
 ```
 
 ## Introduction

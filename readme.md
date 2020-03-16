@@ -43,33 +43,9 @@ This will give you a Laravel 7 installation with Lucid out-of-the-box. If you wi
 composer create-project lucid-arch/laravel=6.x my-project-6.x
 ```
 
-##### 5.8
-```
-composer create-project lucid-arch/laravel=5.8.x my-project-5.8
-```
-
-> Literally 5.8.x and not 5.8.0 or 5.8.1...
-
-##### 5.7
-```
-composer create-project lucid-arch/laravel=5.7.x my-project-5.7
-```
-
-> Literally 5.7.x and not 5.7.0 or 5.7.1...
-
-##### 5.6
-```
-composer create-project lucid-arch/laravel=5.6.x my-project-5.6
-```
-
 ##### 5.5
 ```
 composer create-project lucid-arch/laravel=5.5.x my-project-5.5
-```
-
-##### 5.4
-```
-composer create-project lucid-arch/laravel=5.4.x my-project-5.4
 ```
 
 ## Introduction

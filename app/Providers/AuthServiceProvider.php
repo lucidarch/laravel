@@ -2,8 +2,8 @@
 
 namespace Framework\Providers;
 
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Framework\Model' => 'Framework\Policies\ModelPolicy',
+        // 'Framework\Models\Model' => 'Framework\Policies\ModelPolicy',
     ];
 
     /**

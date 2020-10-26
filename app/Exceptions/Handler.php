@@ -3,42 +3,35 @@
 namespace Framework\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Throwable;
 
 class Handler extends ExceptionHandler
 {
     /**
-     * A list of the exception types that should not be reported.
+     * A list of the exception types that are not reported.
      *
      * @var array
      */
     protected $dontReport = [
+        //
     ];
 
     /**
-     * Report or log an exception.
+     * A list of the inputs that are never flashed for validation exceptions.
      *
-     * @param  \Throwable  $exception
-     * @return void
-     *
-     * @throws \Exception
+     * @var array
      */
-    public function report(Throwable $exception)
-    {
-        parent::report($exception);
-    }
+    protected $dontFlash = [
+        'password',
+        'password_confirmation',
+    ];
 
     /**
-     * Render an exception into an HTTP response.
+     * Register the exception handling callbacks for the application.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Throwable  $exception
-     * @return \Symfony\Component\HttpFoundation\Response
-     *
-     * @throws \Throwable
+     * @return void
      */
-    public function render($request, Throwable $exception)
+    public function register()
     {
-        return parent::render($request, $exception);
+        //
     }
 }
